@@ -1,18 +1,28 @@
 
 import React, {useState} from 'react'
-export default function TodoForm() {
-    const [input, setinput] = useState();
+export default function TodoForm(props) {
+    const [input, setinput] = useState(" ");
     // handel sybmit will break any event 
     const handelSubmit = (event) =>{
         // preventDefault will break any event of function handelSubmit
         event.preventDefault();
+
+        // to export data from this component to todolist compo<ul class="nav justify-content-center">
+        
+        // when you submit and clcikc the props will export text from input
+        
+        props.onSubmit({
+            text: input
+        })
+
+
         // when you submit will remove latest input
         setinput('');
     }
     const HandelChange = (event) =>{
         // preventDefault will break any event of function handelSubmit
         console.log(event.target.value)
-        // setinput(event.target.value)
+        setinput(event.target.value)
     }
     return (
     <div>
