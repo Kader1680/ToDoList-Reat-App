@@ -1,4 +1,3 @@
-
 import React, {useState} from 'react'
 export default function TodoForm(props) {
     const [input, setinput] = useState(" ");
@@ -7,7 +6,7 @@ export default function TodoForm(props) {
         // preventDefault will break any event of function handelSubmit
         event.preventDefault();
 
-        // to export data from this component to todolist compo<ul class="nav justify-content-center">
+        // to export data from this component to todolist compo
         
         // when you submit and clcikc the props will export text from input
         
@@ -20,7 +19,6 @@ export default function TodoForm(props) {
         setinput('');
     }
     const HandelChange = (event) =>{
-        // preventDefault will break any event of function handelSubmit
         console.log(event.target.value)
         setinput(event.target.value)
     }
