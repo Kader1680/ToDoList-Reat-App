@@ -30,15 +30,18 @@ export default function TodoList() {
         settodolist(removearry)
       }
 
-
+      const [line, setline] = useState(false);
+      const Line = () =>{
+        setline(!line)
+      }
 
 
 
   return (
-    <div>
-      <h3>what the plan for to day</h3>
+    <div class="input">
+      <h3 className='mb-4'>what the plan for to day</h3>
       <TodoForm onSubmit={add} />
-      <Todo todolist={todolist} removetodo={removetodo} />
+      <Todo class="todo" todolist={todolist}  removetodo={removetodo} />
     </div>
   )
 }

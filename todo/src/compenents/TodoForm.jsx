@@ -23,7 +23,7 @@ export default function TodoForm(props) {
         setinput(event.target.value)
     }
     return (
-    <div>
+    <div class="myform">
         {/* i add handsumbit to break any submition when i click on button */}
         {/* the goal when i click to button don't make reload to the page */}
         <form onSubmit={handelSubmit}>
